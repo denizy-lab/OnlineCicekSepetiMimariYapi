@@ -1,0 +1,56 @@
+﻿@*@model Entities.Entites.Product
+*@
+@model ProductModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>@ViewData["Title"] Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitPriceText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnitPriceText)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StockAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StockAmount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+        @*<dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Guid)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Guid)
+            </dd>*@
+    </dl>
+</div>
+<div>
+    <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a class="btn btn-dark" asp-action="Index">Back to Product List</a>
+</div>
